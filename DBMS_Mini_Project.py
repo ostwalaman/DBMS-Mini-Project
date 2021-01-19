@@ -48,7 +48,7 @@ def myButtonEvent(selection):
     GENDER = G1.get()
 
     if selection in ('Insert'):
-        con = pymysql.connect(host = "localhost", user = "root", password = "Jio@1234", db = "project") #Connect to MySQL
+        con = pymysql.connect(host = "localhost", user = "root", password = "password", db = "project") #Connect to MySQL - In password type your MySQL Passowrd
         cur = con.cursor() #Get the Cursor Object
 
         query = "create table if not exists student(ID char(5) primary key not null, NAME char(20), BRANCH char(20), ROLL_NO char(5), GENDER char(1))"
